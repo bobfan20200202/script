@@ -8,7 +8,7 @@ is less than 20% or more than 80%. So battey can have a longer life.
 ### How
 * It assumes you have Git installed on Windows. It relies on git bash shell.
 * Copy it to the desk top and double click to run it.
-* To have a flashing window: 
+* To have a flashing window: <br>
   Start >> Settings >> Ease of Access >> Audio >> Show audio alerts visually >> choose "Flash the active window"
 
 ## autohotkey1.ahk
