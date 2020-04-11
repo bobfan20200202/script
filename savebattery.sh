@@ -18,6 +18,19 @@
 #
 #
 
+delay () {
+	echo 
+    postpone='N'
+    read -ep "Postpone 30 minutes? (Y)" -t 5 postpone
+	echo $postpone
+	if [[ -z $postpone ]]; then
+	   sleep 10
+	else
+	   echo "postponed"
+	   sleep 1800
+	fi
+}
+
 while [[ 1 ]]
 do
 	test=`(WMIC PATH Win32_Battery Get EstimatedChargeRemaining)`
@@ -26,12 +39,10 @@ do
 
 	if [[ $pct -lt 20 ]]; then
 	  echo "battery low " $pct"%"
-	  echo 
-	  sleep 10
+      delay
 	elif [[ $pct -gt 80 ]]; then
 	  echo "battery full " $pct"%"
-	  echo 
-	  sleep 10
+      delay
 	else
 	  sleep 300
 	fi
