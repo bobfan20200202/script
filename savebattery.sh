@@ -20,7 +20,6 @@
 
 delay () {
 	echo 
-    postpone='N'
     read -ep "Postpone 30 minutes? (Y)" -t 5 postpone
 	echo $postpone
 	if [[ -z $postpone ]]; then
